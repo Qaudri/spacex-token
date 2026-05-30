@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+    border-bottom: 1px solid var(--light);
+    /* padding: 5px 20px; */
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: var(--light);
+    margin: 0 15px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
