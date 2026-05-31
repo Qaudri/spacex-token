@@ -16,20 +16,28 @@
 <body>
     <nav>
         <div class="container">
-            <a href="index.html">
+            <a href="#top" class="nav-logo">
                 <img src="assets/images/logo.svg" width="80" height="80" alt="SpaceX Token Logo" class="logo">
             </a>
 
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="roadmap.html">Roadmap</a>
-                <a href="team.html">Official Links</a>
-                <a href="contact.html">Contact</a>
+                <a href="#features">Utilities</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#tokenomics">Tokenomics</a>
+                <a href="#tiers">Tiers</a>
+                <a href="#mission">Mission</a>
+                <a href="#vision">Vision</a>
             </div>
         </div>
     </nav>
-    <header>
+    <header id="top">
         <div class="container">
             <span class="outline">$SPCX</span>
             <h1>SpaceX Token</h1>
@@ -43,7 +51,7 @@
     
     </header>
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -134,7 +142,7 @@
         </div>
     </section>
 
-    <section class="roadmap">
+    <section class="roadmap" id="roadmap">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -231,7 +239,7 @@
         </div>
     </section>
 
-    <section class="tokenomics">
+    <section class="tokenomics" id="tokenomics">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -362,7 +370,7 @@
         </div>
     </section>
 
-    <section class="tiers">
+    <section class="tiers" id="tiers">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -520,7 +528,7 @@
         </div>
     </section>
 
-    <section class="mission">
+    <section class="mission" id="mission">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -590,7 +598,7 @@
         </div>
     </section>
 
-    <section class="vision">
+    <section class="vision" id="vision">
         <div class="container">
             <div class="section-divider">
                 <span class="section-divider__line"></span>
@@ -644,5 +652,14 @@
             <p class="monospace">&copy; 2026 SpaceX Token. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                var t = document.getElementById('nav-toggle');
+                if (t) t.checked = false;
+            });
+        });
+    </script>
 </body>
 </html>
