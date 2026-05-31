@@ -61,8 +61,49 @@ header {
     }
 }
 
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.section-divider__line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+}
+
+.section-divider__index {
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 0.45rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #070707;
+    white-space: nowrap;
+    box-shadow:
+        0 0 0 4px #070707,
+        0 0 24px rgba(255, 255, 255, 0.04);
+}
+
 .features {
     padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(ellipse at 20% 30%, rgba(52, 211, 153, 0.08), transparent 45%),
+            radial-gradient(ellipse at 80% 70%, rgba(255, 215, 0, 0.07), transparent 45%);
+        pointer-events: none;
+    }
 
     .cols-3 {
         gap: 2rem;
